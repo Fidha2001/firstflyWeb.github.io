@@ -1,0 +1,206 @@
+#myLogo{
+	width: 50px;
+}
+
+.navbar{
+	background-color: #d1e3ed;
+}
+
+.nav-link{
+	color: black;
+	font-family: 'Forum', serif;
+}
+.navbar-brand{
+	color: black;
+	font-family: 'Gantari', sans-serif;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+	display: block;
+}
+#main{
+	width: 100%;
+	height: 90vh;
+	text-align: center;
+	background-image: url('../images/tours-travel.png');
+	background-size: cover;
+	
+}
+
+#main h1:first-child {
+	font-family: 'Gantari', sans-serif;
+	color: black;
+}
+#main h1{
+	font-family: 'Forum', serif;
+}
+
+#changetext {
+    color: red;
+    font-size: 45px;
+}
+
+#changetext:after {
+    content: "";
+    animation-name: changetextanim;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changetextanim {
+    0% {
+        content: "India";
+    }
+    16.66% {
+        content: "France";
+    }
+    33.33% {
+        content: "Germany";
+    }
+    50% {
+        content: "Italy";
+    }
+    66.66% {
+        content: "Australia";
+    }
+    83.33% {
+        content: "Europe";
+    }
+    100% {
+        content: "India";
+    }
+}
+
+.textHeight{
+	height: 200px;
+}
+#DetailsSection{
+	background-color: #BEE4F4;
+}
+.bookTxt{
+	text-align: center;
+	font-family: 'Gantari', sans-serif;
+	color: #144196;
+	margin-top: 12px;
+	background-color: #87CEEB;
+}
+#Leftimg{
+	clip-path: circle(63.9% at 48% 55%);
+}
+#Packages #star > i:nth-child(-n+3){
+	color: orange;
+}
+#Packages #star{
+	font-size: 30px;
+}
+#starFull{
+	color: orange;
+	font-size: 30px;
+}
+#starPartial{
+	font-size: 30px;
+}
+#starPartial > i:nth-child(-n+4){
+	color: orange;
+}
+.imgSlider {
+    width: 50%;
+    margin: 0 auto;
+    font-family: 'Forum', serif;
+    font-weight: bolder;
+}
+
+.carousel {
+    text-align: center;
+}
+
+#sliders .card {
+    margin-bottom: 20px;
+}
+#sliders{
+	background-color: #E5E4E2;
+}
+
+#slickSlider figure:hover img{
+	transform: scale(1.2);
+}
+#AboutUS p{
+  font-family: "Hina Mincho", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.footer{
+	height: 400px;
+	background-color: #87CEEB;
+	align-items: center;
+	font-family: 'Forum', serif;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-para-width {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#AboutImg{
+	width: 600px;
+}
+#AboutUS{
+	max-height: 600px;
+}
+
+#slickSlider .bookTxt{
+	background-color: whi
+} 
+
+.helpDesk {
+  width: 45px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+#helpDeskModal img{
+	width: 30px;
+	padding: 5px;
+}
+.custom-modal-content {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-family: 'Forum', serif;
+  }
+
+
+#helpDeskModal .zoom:hover {
+  transform: scale(2.0);
+}
+
+#thankYouMessage,#registerMsg,#loginSuccess,#loginError {
+   font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    animation: scaleAndFade 3s ease forwards;
+  }
+  
+  @keyframes scaleAndFade {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+
+
+.error{
+    border:2px solid red;
+}

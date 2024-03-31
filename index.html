@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@1,900&family=Josefin+Slab:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+	<!-- Navigation Menu -->
+	<nav class="navbar navbar-expand-lg">
+    <img src="images/logo.PNG" id="myLogo">&nbsp;&nbsp;
+    <a class="navbar-brand" href="#">First Fly</a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#main">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#DetailsSection">Book</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Packages
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#Packages">United States</a>
+            <a class="dropdown-item" href="#Packages">India</a>
+            <a class="dropdown-item" href="#Packages">France</a>
+            <a class="dropdown-item" href="#Packages">Germany</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sliders">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#slickSlider">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#AboutUS">About</a>
+        </li>
+      </ul>
+      <button class="btn btn-success" data-toggle="modal" data-target="#loginModal">Login</button>&nbsp;
+      <button class="btn btn-success" data-toggle="modal" data-target="#registerModal">Register</button>
+    </div>
+  </nav>
+  <!-- End of navigation Menu -->
+
+  <!-- hero part -->
+  <div class="jumbotron" id="main"> 
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Welcome to <span style="color: #144196">FIRST FLY</span></h1>
+        <h1 class="display-4">Visit <span id="changetext"></span></h1>
+        <p>Make your dream destination even more enchanting with us!</p> 
+        <button class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+      </div>
+    </div>
+  </div>
+  <!-- End of hero part -->
+
+
+  <!-- new section -->
+ <div class="jumbotron" id="DetailsSection">
+    <div class="container-fluid pt-0">
+      <div class="bookTxt">
+        <h1>Book</h1>
+      </div>
+        <div class="row">
+            <div class="col-md-6 mt-4">
+                <img src="images/worldtour.png" id="Leftimg" class="img-fluid">
+            </div>
+            <div class="col-md-6 mt-4">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <select class="form-control" name="destination" id="destination">
+                            <option value="">Where to</option>
+                            <option value="India">India</option>
+                             <option value="India">France</option>
+                              <option value="Dubai">Dubai</option>
+                            <option value="Greece">Greece</option>
+                            <option value="NewYork">New York</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Venice">Venice</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="NoOfPerson" class="form-control" placeholder="How many person" id="NoOfPerson">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="Fromdate" class="form-control Fromdate" id="Fromdate">
+                        <p id="startDate"></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="Todate" class="form-control Todate" id="Todate">
+                        <p id="endDate"></p>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control textHeight" placeholder="Enter Your Name & Details" id="NameDetails"></textarea>
+                        <p id="Details"></p>
+                        <p id="DetailsNeg"></p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-warning" id="BookSbmt">Book Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- package section -->
+<div class="container-fluid mt-4" id="Packages">
+  <div class="bookTxt">
+  <h1>Packages</h1>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <img src="images/india.png" class="card-img-top">
+     <div class="card-body">
+      <h1 align="center">India</h1>
+      <p class="card-text">India is one of the most preferred tourist destinations in Asia because of its beautiful landscape, rich cultural heritage, myriad attractions and valuable ancient history.</p>
+      <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$500</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+ <div class="col-md-4">
+    <div class="card">
+      <img src="images/france.png" class="card-img-top">
+     <div class="card-body">
+      <h1 align="center">France</h1>
+      <p class="card-text">France, renowned for its rich cultural heritage, picturesque landscapes, and gastronomic delights, stands as a beacon for global tourism.</p>
+      <div id="starPartial">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$900</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+ <div class="col-md-4">
+    <div class="card">
+      <img src="images/dubai.png" class="card-img-top">
+     <div class="card-body">
+      <h1 align="center">Dubai</h1>
+      <p class="card-text">Dubai, a glittering oasis amidst the Arabian Desert, stands as a beacon of modernity and luxury, attracting millions of tourists from around the globe each year.</p>
+      <div id="starFull">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$1100</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- 2nd row -->
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card">
+      <img src="images/greece.png" class="card-img-top">
+     <div class="card-body">
+      <h1 align="center">Greece</h1>
+      <p class="card-text">Greece, a timeless land of ancient wonders and breathtaking landscapes, stands as a quintessential destination for travelers seeking history, culture, and natural beauty. </p>
+      <div id="starPartial">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$900</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+ <div class="col-md-4">
+    <div class="card">
+      <img src="images/italy.png" class="card-img-top">
+     <div class="card-body">
+      <h1 align="center">Italy</h1>
+      <p class="card-text">Italy, a country steeped in history, art, and culinary delights, is a timeless destination that captures the hearts and imaginations of travelers worldwide.</p>
+       <div id="starFull">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$1000</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+ <div class="col-md-4">
+    <div class="card">
+      <img src="images/newyork.png" class="card-img-top">
+     <div class="card-body">
+      <h1 align="center">New York</h1>
+      <p class="card-text">New York City, the vibrant epicenter of culture, commerce, and creativity, stands as one of the world's most iconic tourism destinations.</p>
+       <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$1100</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+</div>
+<!-- 3rd row -->
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="images/unitedkingdom.png" class="card-img-top">
+     <div class="card-body">
+      <h1 align="center">United Kingdom</h1>
+      <p class="card-text">The United Kingdom, a land steeped in history, tradition, and natural beauty, stands as a captivating destination for travelers from around the world. </p>
+      <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$800</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+ <div class="col-md-4">
+    <div class="card h-100">
+      <img src="images/switzerland.png" class="card-img-top" height="50%">
+     <div class="card-body">
+      <h1 align="center">Switzerland</h1>
+      <p class="card-text">Switzerland, a country renowned for its breathtaking Alpine landscapes, charming cities, and pristine lakes, captivates visitors with its timeless beauty and enchanting atmosphere. </p>
+      <div id="starPartial">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$900</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+ <div class="col-md-4">
+    <div class="card h-100">
+      <img src="images/venice.jpg" class="card-img-top" height="50%">
+     <div class="card-body">
+      <h1 align="center">Venice</h1>
+      <p class="card-text">Venice, often described as a floating masterpiece, stands as one of the world's most enchanting and unique tourism destinations.</p>
+      <div id="starFull">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h3>Price: <b>$1100</b></h3>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#bookNowModal">Book Now</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- sliders -->
+<div class="container-fluid mt-4" id="sliders">
+  <div class="bookTxt">
+    <h1>Services</h1>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-4">
+      <div id="carouselExampleSlidesOnly1" class="carousel slide" data-ride="carousel">
+        <div class="card">
+          <div class="card-body">
+            <div class="carousel-inner">
+              <div class="carousel-item active imgSlider">
+               <img src="images/hotel.png" class="imgSlider">
+               <p class="card-text">Affordable hotels</p>
+             </div>
+             <div class="carousel-item imgSlider">
+               <img src="images/fast-food.png" class="imgSlider">
+               <p class="card-text">Food and Drinks</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="col-md-4">
+    <div id="carouselExampleSlidesOnly2" class="carousel slide" data-ride="carousel">
+      <div class="card">
+        <div class="card-body">
+          <div class="carousel-inner">
+            <div class="carousel-item active imgSlider">
+             <img src="images/guideline.png" class="imgSlider">
+             <p class="card-text">Safety Guides</p>
+           </div>
+           <div class="carousel-item imgSlider">
+             <img src="images/tour-guide.png" class="imgSlider">
+             <p class="card-text">Travel Guides</p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="col-md-4">
+  <div id="carouselExampleSlidesOnly3" class="carousel slide" data-ride="carousel">
+    <div class="card">
+      <div class="card-body">
+        <div class="carousel-inner">
+          <div class="carousel-item active imgSlider">
+           <img src="images/travel-insurance.png" width="50%">
+           <p class="card-text">Travel Insurance</p>
+         </div>
+         <div class="carousel-item imgSlider">
+           <img src="images/10-percent.png" class="imgSlider">
+           <p class="card-text">Discounts</p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+
+<!-- gallery section -->
+<div class="container" id="slickSlider">
+  <div class="bookTxt pt-0">
+    <h1>Gallery</h1>
+    <hr class="Line">
+  </div>
+  <div class="row slickSliders mt-4">
+    <div class="col-md-12">
+      <figure>
+         <img src="images/dubai2.jpeg">
+      </figure>
+    </div>
+    <div class="col-md-12">
+      <figure>
+        <img src="images/dessert.jpg">
+      </figure>
+    </div>
+    <div class="col-md-12">
+      <figure>
+        <img src="images/greece2.jpeg">
+      </figure>   
+    </div>
+    <div class="col-md-12">
+      <figure>
+        <img src="images/greeceImg.jpeg">
+      </figure>    
+    </div>
+    <div class="col-md-12">
+      <figure>
+        <img src="images/italy2.jpeg">
+      </figure>  
+    </div>
+    <div class="col-md-12">
+      <figure>
+         <img src="images/snowy.jpeg">
+      </figure>
+    </div>
+    <div class="col-md-12">
+      <figure>
+         <img src="images/newyork2.jpg">
+      </figure>
+    </div>
+  </div>
+</div>
+
+<!-- about us section -->
+ <div class="jumbotron" id="AboutUS">
+    <div class="container-fluid pt-0">
+      <div class="bookTxt">
+        <h1>About Us</h1>
+      </div>
+        <div class="row">
+            <div class="col-md-6 mt-4">
+                <img src="images/snowy.jpeg" id="AboutImg" class="img-fluid">
+            </div>
+            <div class="col-md-6 mt-4">
+              <p class="">Welcome to First Fly Tours and Travels, your gateway to unforgettable travel experiences! At Adventure Explorers, we're passionate about creating extraordinary journeys that immerse you in the beauty and diversity of the world.</p>
+              <p>Established in 2017, Adventure Explorers has been dedicated to providing unparalleled travel adventures to adventurers of all ages and interests. From thrilling expeditions to remote destinations to leisurely tours of cultural landmarks, we offer a wide range of curated travel experiences designed to inspire, educate, and exhilarate.</p>
+              <p>Our team of experienced travel experts is committed to crafting personalized itineraries that cater to your unique preferences and interests. Whether you're seeking adrenaline-pumping adventures, serene escapes in nature, or immersive cultural experiences, we'll ensure your journey with Adventure Explorers exceeds your expectations.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="mt-5">
+                    <img src="images/logo.PNG" id="myLogo" alt="Logo">
+                    <h3 class="m-0">First Fly</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mt-3 text-center">
+                    <p class="custom-para-width">Drawing from a legacy of rich experiences, our journey at First Fly is steeped in the wisdom of the past. With years of expertise and a commitment to excellence, we have navigated diverse landscapes, cultures, and adventures.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <div class="d-inline-block mr-3">
+                    <i class="bi bi-instagram"></i>
+                </div>
+                <div class="d-inline-block mr-3">
+                    <i class="bi bi-whatsapp"></i>
+                </div>
+                <div class="d-inline-block mr-3">
+                    <i class="bi bi-twitter"></i>
+                </div>
+                <div class="d-inline-block">
+                    <i class="bi bi-browser-chrome"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center mt-3">
+                <p>&copy; 2024 First Fly. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- modal -->
+<div class="modal" id="loginModal">
+  <div class="modal-dialog modal-dialog-centered d-flex justify-content-center align-items-center">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="emailLogin">Email address</label>
+            <input type="email" name="emailLogin" id="emailLogin" class="form-control" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" id="password" placeholder="Password">
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-success" onclick="validateLogin()">Submit</button>
+          </div>
+          <p class="mt-3 text-center">Dont't Have an Account? <a href="#registerModal" data-toggle="modal" data-dismiss="modal">Sign Up</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- register modal -->
+
+<div class="modal" id="registerModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-center justify-content-center">
+        <h5 class="modal-title text-center" id="registerModalLabel">Register</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="registrationForm">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Enter username">
+            <p id="userValidation"></p>
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input type="text" name="contact" id="contact" class="form-control" placeholder="Contact Number">
+            <p id="contactValidation"></p>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" class="form-control" id="dob" placeholder="Date of Birth">
+            <p id="dobValidation"></p>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control">
+              <option value="">Select your gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+            </select>
+            <p id="genderValidation"></p>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+             <p id="emailValidation"></p>
+          </div>
+          <div class="form-group">
+            <label for="RegPassword">Password</label>
+            <input type="password" name="RegPassword" class="form-control" id="RegPassword" placeholder="Password">
+            <p id="passValidation"></p>
+          </div>
+          <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+            <p id="passwordValidation"></p>
+          </div>
+          <div class="text-center">
+            <button type="button" id="RegBtn" class="btn btn-success" onclick="validateRegister()">Register</button>
+          </div>
+          <p class="mt-3 text-center">Already Have an Account? <a href="#loginModal" data-toggle="modal" data-dismiss="modal">Sign In</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- book now modal -->
+
+<div class="modal" id="bookNowModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-center justify-content-center">
+        <h5 class="modal-title text-center" id="bookNowModalLabel">Book Now</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingFormModal">
+                    <div class="form-group">
+                        <select class="form-control" name="destinationModal" id="destination">
+                            <option value="">Where to</option>
+                            <option value="India">India</option>
+                             <option value="India">France</option>
+                              <option value="Dubai">Dubai</option>
+                            <option value="Greece">Greece</option>
+                            <option value="NewYork">New York</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Venice">Venice</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="NoOfPersonModal" class="form-control" placeholder="How many person" id="NoOfPersonModal">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="FromdateModal" class="form-control FromdateModal" id="FromdateModal">
+                        <p id="startDateModal"></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="TodateModal" class="form-control TodateModal" id="TodateModal">
+                        <p id="endDateModal"></p>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control textHeight" placeholder="Enter Your Name & Details" id="NameDetailsModal"></textarea>
+                        <p id="DetailsModal"></p>
+                        <p id="DetailsNegModal"></p>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-warning" id="BookSbmtModal" onclick="BookNow()">Book Now</button>
+                    </div>
+                </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="helpDesk">
+  <img src="images/customer-service.png" class="img-fluid" onclick="helpDesk()">
+</div>
+
+<!-- helpdesk modal -->
+
+<div id="helpDeskModal" class="modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content custom-modal-content"> <!-- Apply custom class here -->
+      <div class="modal-header">
+        <h5 class="modal-title text-center w-100">Feedback and Assistance</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4 border-right">
+            <h6 class="modal-title text-center mb-3">How satisfied are you with our Website?</h6>
+            <div class="row justify-content-center">
+              <div class="col-md-4 text-center zoom">
+                <i class="bi bi-emoji-frown" style="color: red;" onclick="closeHelpDesk()"></i>
+              </div>
+              <div class="col-md-4 text-center zoom">
+                <i class="bi bi-emoji-neutral" style="color: orange;" onclick="closeHelpDesk()"></i>
+              </div>
+              <div class="col-md-4 text-center zoom">
+                <i class="bi bi-emoji-smile" style="color: green;" onclick="closeHelpDesk()"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 border-right">
+            <h6 class="modal-title text-center mb-3">Have any questions?</h6>
+            <input type="text" name="text" class="form-control mb-3">
+            <div class="text-center">
+              <button type="button" class="btn btn-primary btn-warning mt-5" onclick="closeHelpDesk()">Send</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h6 class="modal-title text-center mb-3">Raise a complaint</h6>
+            <textarea class="form-control mb-3" rows="3"></textarea>
+            <div class="text-center">
+              <button type="button" class="btn btn-primary btn-success" onclick="closeHelpDesk()">Submit</button>
+              <p class="mt-2">If you haven't got any response, call 180078524639</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="thankYouMessage" class="alert alert-success" style="position: fixed; top: 20px; right: 20px; display: none;">
+  Thank you for your response!!
+</div>
+<div id="registerMsg" class="alert alert-success" style="position: fixed; top: 20px; right: 20px; display: none;">
+  Registered Succesfully!
+</div>
+<div id="loginSuccess" class="alert alert-success" style="position: fixed; top: 20px; right: 20px; display: none;">
+  You've Successfully logged in!
+</div>
+<div id="loginError" class="alert alert-danger" style="position: fixed; top: 20px; right: 20px; display: none;">
+  Invalid Username and Password!
+</div>
+
+
+
+
+
+
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.js" integrity="sha512-FruHrHbK/kxrB8bV0sXKTaPazRf3Nz5gFVtdV0INaL+XZ6ehZtcuiGe8ZcJkvOcnPNBcJzZFAnkgdl7PmepNnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  $(document).ready(function(){
+   var currentDate = new Date();
+
+  $('#Fromdate').on('change', function(){
+        var inputDateValue = $(this).val();
+        var dateParts = inputDateValue.split('-');
+        var year = parseInt(dateParts[0]);
+        var month = parseInt(dateParts[1]) - 1;
+        var day = parseInt(dateParts[2]);
+        var Fromdate = new Date(year, month, day);
+        if (Fromdate <= currentDate){
+            $('#startDate').text('From date should be greater than present date');
+            $('.Fromdate').css('border','2px solid red');
+            $('#startDate').css('color','red');
+        } else {
+            $('#startDate').text('');
+            $('.Fromdate').css('border','none');
+        }
+    });
+
+
+   $('#Todate').on('change',function(){
+      var From = $('#Fromdate').val();
+      var dateSplit = From.split('-');
+      var y = parseInt(dateSplit[0]);
+      var m = parseInt(dateSplit[1]) - 1;
+      var d = parseInt(dateSplit[2]);
+      var Fromdate = new Date(y, m, d);
+
+      var To = $(this).val();
+      var dateSep = To.split('-');
+      var yy = parseInt(dateSep[0]);
+      var mm = parseInt(dateSep[1]) - 1;
+      var dd = parseInt(dateSep[2]);
+      var Todate = new Date(yy, mm, dd);
+      if (Todate <= Fromdate){
+         $('#endDate').text('End date should be greater than Start date');
+         $('.Todate').css('border','2px solid red');
+         $('#endDate').css('color','red');
+      } else {
+         $('#endDate').text('');
+         $('.Todate').css('border','none');
+      }
+   });
+
+   $('#NameDetails').keyup(function(){
+      var NameDetails = $(this).val();
+      if (NameDetails.length < 50){
+         $('#Details').text('Name and details should be min 50 characters');
+         $('#Details').css('color','red');
+      } else {
+         $('#Details').text('');
+      }
+      if(NameDetails.length > 500){
+         $('#DetailsNeg').text('Name and details should be max 500 characters');
+         $('#DetailsNeg').css('color','red');
+      } else {
+         $('#DetailsNeg').text('');
+      }
+   });
+
+   $('#BookSbmt').on('click', function(e){
+      e.preventDefault();
+      var Fromdate = new Date($('#Fromdate').val());
+      var ToFromdate = new Date($('#ToFromdate').val());
+      var NameDetails = $('#NameDetails').val();
+      if(!Fromdate || !ToFromdate || !NameDetails){
+         alert('Please fill all the details');
+         return false;
+      } else {
+         alert('Booking successful!');
+      }
+   });
+
+   // $('#bookNow').on('click', function(e){
+   //       alert('Booking successful!');
+   //       $('#bookNowModal').hide();
+   //       setTimeout(function() {
+   //      location.reload();
+   //  }, 500);
+   // });
+
+
+$('.slickSliders').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots:true,
+  autoplay:true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+});
+
+function BookNow() {
+    var Fromdate = new Date($('#FromdateModal').val());
+    var Todate = new Date($('#TodateModal').val());
+    var NameDetails = $('#NameDetailsModal').val();
+    var currentDate = new Date();
+    var flag = 0;
+
+    if (!Fromdate || !Todate || !NameDetails) {
+        alert('Please fill in all the details');
+        return false;
+    }
+
+    if (Fromdate <= currentDate){
+      $('#startDateModal').text('From date should be greater than present date');
+      $('.FromdateModal').css('border','2px solid red');
+      $('#startDateModal').css('color','red');
+      flag=1;
+    } else {
+      $('#startDateModal').text('');
+      $('.FromdateModal').css('border','none');
+    }
+
+    if (Todate <= Fromdate) {
+        $('#endDateModal').text('End date should be greater than Start date');
+        $('.TodateModal').css('border', '2px solid red');
+        $('#endDateModal').css('color', 'red');
+        flag = 1;
+    } else {
+        $('#endDateModal').text('');
+        $('.TodateModal').css('border', 'none');
+    }
+
+    if (NameDetails.length < 50) {
+        $('#DetailsModal').text('Name and details should be at least 50 characters');
+        $('#DetailsModal').css('color', 'red');
+        flag = 1;
+    } else {
+        $('#DetailsModal').text('');
+    }
+
+    if (NameDetails.length > 500) {
+        $('#DetailsNegModal').text('Name and details should be at most 500 characters');
+        $('#DetailsNegModal').css('color', 'red');
+        flag = 1;
+    } else {
+        $('#DetailsNegModal').text('');
+    }
+
+    if (flag != 1) {
+        alert('Booking successful!');
+        location.reload();
+
+    }
+}
+
+function validateRegister() {
+    var username = $('#username').val();
+    var contact = $('#contact').val();
+    var dob = $('#dob').val();
+    var gender = $('#gender').val();
+    var email = $('#email').val();
+    var password = $('#RegPassword').val();
+    var confirm_password = $('#confirm_password').val();
+
+
+    var flag = 0;
+
+    if (!username) {
+        $('#userValidation').text('Please enter a username');
+        $('#username').addClass('error');
+        flag=1;
+    }
+    else{
+      $('#userValidation').text('');
+        $('#username').removeClass('error');
+    }
+
+    if (!contact || isNaN(contact) || contact.length !== 10) {
+        $('#contactValidation').text('Please enter a valid 10-digit contact number');
+        $('#contact').addClass('error');
+         flag=1;
+    }
+    else{
+       $('#contactValidation').text('');
+        $('#contact').removeClass('error');
+    }
+
+    if (!dob) {
+        $('#dobValidation').text('Please enter your date of birth');
+        $('#dob').addClass('error');
+         flag=1;
+    }
+    else{
+      $('#dobValidation').text('');
+        $('#dob').removeClass('error');
+    }
+
+    if (!gender) {
+        $('#genderValidation').text('Please select your gender');
+        $('#gender').addClass('error');
+         flag=1;
+    }else{
+      $('#genderValidation').text('');
+        $('#gender').removeClass('error');
+    }
+
+     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+        $('#emailValidation').text('Please enter a valid email address');
+        $('#email').addClass('error');
+        flag=1;
+    }else{
+       $('#emailValidation').text('');
+        $('#email').removeClass('error');
+    }
+
+    if (!password || password.length < 8) {
+        $('#passValidation').text('Password must be at least 8 characters long');
+        $('#RegPassword').addClass('error');
+         flag=1;
+    }else{
+      $('#passValidation').text('');
+        $('#RegPassword').removeClass('error');
+    }
+
+    if (!confirm_password || password !== confirm_password) {
+        $('#passwordValidation').text('Passwords do not match');
+        $('#confirm_password').addClass('error');
+         flag=1;
+    }else{
+       $('#passwordValidation').text('');
+      $('#confirm_password').removeClass('error');
+    }
+
+    if (flag==0) {
+       localStorage.setItem('registeredEmail', email);
+        localStorage.setItem('registeredPassword', password);
+
+        $('#registerModal').modal('hide');
+        $('#registerMsg').show();
+        setTimeout(function() {
+            $('#registerMsg').hide();
+            location.reload();
+        }, 3000);
+    }
+}
+
+function validateLogin() {
+    var email = $('#emailLogin').val();
+    var password = $('#password').val();
+
+    var registeredEmail = localStorage.getItem('registeredEmail');
+    var registeredPassword = localStorage.getItem('registeredPassword');
+
+    if (email === registeredEmail && password === registeredPassword) {
+        $('#loginModal').modal('hide');
+        $('#loginSuccess').show();
+        setTimeout(function() {
+            $('#loginSuccess').hide();
+            location.reload();
+        }, 3000);
+    } else {
+       $('#loginModal').modal('hide');
+        $('#loginError').show();
+        setTimeout(function() {
+            $('#loginError').hide();
+            location.reload();
+        }, 3000);
+    }
+    return false;
+}
+
+
+
+
+function helpDesk(){
+  $('#helpDeskModal').modal('show');
+}
+function closeHelpDesk() {
+  $('#helpDeskModal').on('hidden.bs.modal', function () {
+    $('#thankYouMessage').show();
+    setTimeout(function() {
+      $('#thankYouMessage').hide();
+    }, 3000);
+  });
+  $('#helpDeskModal').modal('hide');
+}
+
+
+
+</script>
+
+</body>
+</html>
